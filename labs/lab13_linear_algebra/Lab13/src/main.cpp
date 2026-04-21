@@ -1,13 +1,24 @@
 #include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <cmath>
+#include <string>
 
-// Lab 13
-// TODO: реализуйте решение по заданию в labs/lab13_linear_algebra/README.md
-//
-// Рекомендация по выводу:
-// - без лишнего текста
-// - числа через пробел
-// - если несколько строк — в фиксированном порядке
+using namespace std;
+
+const double EPS = 1e-9;
+
+void printMatrix(ofstream& fout, double** a, int m, int n) {
+    for (int i = 0; i < m; i++) {
+        fout << "| ";
+        for (int j = 0; j < n; j++) {
+            fout << setw(10) << fixed << setprecision(4) << a[i][j] << " ";
+        }
+        fout << "| " << setw(10) << fixed << setprecision(4) << a[i][n] << " |\n";
+    }
+    fout << "\n";
+}
+
 int main() {
-    // TODO
-    return 0;
+    
 }
